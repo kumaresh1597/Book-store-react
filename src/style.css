@@ -136,4 +136,25 @@ color: #D2D2D2;
     font-weight: 300;
 }
 
+.more-books{
+    background-color: #242121;
+}
+
+.more-books>h1{
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+}
+
+.book-list{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap:20px;
+}
+
+.list-img>img{
+    width: 150px;
+    height: 210px;
+}
+
 
