@@ -1,0 +1,139 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #292828;
+}
+
+
+.search-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar>input{
+    width: 678px;
+    height: 33px;
+    border-radius: 4px;
+    background-color: #373737;
+    color: #808080;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.search-bar>input::placeholder{
+    font-size: 17px;
+    font-weight: 300;
+    text-align: left;
+    color: #808080;
+}
+
+.search-bar>button{
+    width: 148px;
+    height: 33px;
+    border: 1px solid #FFFFFF80;
+    font-size: 17px;
+    font-weight: 300;
+    background-color: #292828;
+    color:#FFFFFF80;
+}
+
+.nav-left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-left>p{
+    font-size: 35px;
+    font-weight: 400;
+    text-align: left;
+    color: #FFFFFF;
+
+}
+
+.nav-left>p>span{
+font-size: 20px;
+font-weight: 100;
+color: #FFFFFF80;
+}
+
+.nav-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: #242121;
+    gap:20px;
+}
+
+
+
+.card{
+    width: 407px;
+    height: 211.03px;
+    display: flex;
+}
+
+.left>img{
+    width: 150px;
+    height: 211px;
+    border-radius: 2px;
+    transform: rotate(-3.5deg);
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #AB71F461;
+    padding: 10px;
+}
+
+.title{
+    font-size: 25px;
+    font-weight: 700;
+    text-align: left;
+    color:#FFFFFF;
+}
+.desc-div{
+    height: 40%;
+    overflow: auto;
+}
+.desc-div::-webkit-scrollbar{
+    display: none;
+}
+
+.description{
+font-size: 12px;
+font-weight: 400;
+color: #D2D2D2;
+}
+
+.read-now-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.readNow{
+    width: 100px;
+    height: 20px;
+    border: 1px solid #FFFFFF;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
