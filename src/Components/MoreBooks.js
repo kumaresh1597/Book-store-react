@@ -1,6 +1,6 @@
 import React from "react";
 
-const MoreBooks = ({searchResults})=>{
+const MoreBooks = ({moreBookList})=>{
 
     return (
         <div className="more-books">
@@ -9,8 +9,8 @@ const MoreBooks = ({searchResults})=>{
             <br/>
             <div className="book-list">
             {
-                searchResults&& (
-                    searchResults.map((value, index)=>(
+                moreBookList&& (
+                    moreBookList.map((value, index)=>(
                         <div className="list-img" key={index}>
                             <img src={value.volumeInfo.imageLinks.thumbnail} alt={value.volumeInfo.title}/>                     
                         </div>

@@ -6,12 +6,13 @@ import MoreBooks from "./Components/MoreBooks";
 const App = ()=>{
 
   const [searchResults,setSearchResults] = useState([]);
+  const [moreBookList,setMoreBookList] = useState([]);
     
   return (
     <div>
-      <NavBar setSearchResults={setSearchResults}/>
+      <NavBar setSearchResults={setSearchResults} setMoreBookList = {setMoreBookList}/>
       <BooksDisplay searchResults={searchResults}/>
-      <MoreBooks searchResults={searchResults} />
+      <MoreBooks moreBookList={moreBookList} />
     </div>
   )
 }

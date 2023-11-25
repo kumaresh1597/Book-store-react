@@ -7,7 +7,7 @@ import logo from "../images/Standard Collection 11.png";
 import axios from "axios";
 
 
-const NavBar = ({setSearchResults})=>{
+const NavBar = ({setSearchResults,setMoreBookList})=>{
 
     const [search,setSearch] = useState("");
 
@@ -17,9 +17,33 @@ const NavBar = ({setSearchResults})=>{
     },[])
 
     function implementSearch(){
-        axios.get("https://www.googleapis.com/books/v1/volumes",{
+        
+    //   search ||  axios.get("https://www.googleapis.com/books/v1/volumes",{
+    //          params:{
+    //             q: "harry+potter"
+    //          }
+    //     })
+    //     .then(response => {
+    //         setSearchResults(response.data.items);
+    //         setSearch("");
+    //     })
+    //     .catch(error => console.log(error));
+
+    //     search ||  axios.get("https://www.googleapis.com/books/v1/volumes",{
+    //          params:{
+    //             q: "Sherlock+Holmes"
+    //          }
+    //     })
+    //     .then(response => {
+    //         setMoreBookList(response.data.items);
+    //         setSearch("");
+    //     })
+    //     .catch(error => console.log(error));
+
+         if(search !== ""){
+            axios.get("https://www.googleapis.com/books/v1/volumes",{
              params:{
-                q: search || "harry+potter"
+                q: search
              }
         })
         .then(response => {
@@ -27,6 +51,29 @@ const NavBar = ({setSearchResults})=>{
             setSearch("");
         })
         .catch(error => console.log(error));
+
+         }
+         else{
+            axios.get("https://www.googleapis.com/books/v1/volumes",{
+             params:{
+                q: "harry+potter"
+             }
+        })
+        .then(response => {
+            setSearchResults(response.data.items);
+        })
+        .catch(error => console.log(error));
+
+            axios.get("https://www.googleapis.com/books/v1/volumes",{
+             params:{
+                q: "Sherlock+Holmes"
+             }
+        })
+        .then(response => {
+            setMoreBookList(response.data.items);
+        })
+        .catch(error => console.log(error));
+         }
     }
 
     return (
